@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRSH</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: linear-gradient(to bottom, #ecdcdc, #fff);
+            color: #0d0d0d;
+            overflow-y: auto;
+        }
+
+        header {
+            background-color: #fa0404;
+            color: white;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 20px 0;
+        }
+
+        #tree {
+            position: relative;
+            width: 100%;
+            height: 400px;
+        }
+
+        #branches {
+            width: 100%;
+            height: 100%;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .hanging {
+            position: absolute;
+            width: 180px;
+            height: 220px;
+            border: 3px solid #ffffff;
+            border-radius: 10px;
+            background: #fff;
+            box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .hanging img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .hanging:nth-child(1) {
+            top: 250px;
+            left: 30%;
+        }
+
+        .hanging:nth-child(2) {
+            top: 520px;
+            left: 30%;
+        }
+
+        .hanging:nth-child(3) {
+            top: 250px;
+            left: 57%;
+        }
+
+        .hanging:nth-child(4) {
+            top: 520px;
+            left: 57%;
+        }
+
+        #content {
+            display: none;
+            margin-top: 30px;
+            animation: fadeIn 4.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>FOR THE PRETTIEST PERSON 🫵💐</h1>
+    </header>
+
+    <!-- Tree -->
+    <div id="tree">
+        <svg id="branches" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300">
+            <!-- Trunk -->
+            <rect x="240" y="0" width="15" height="550" fill="#ff0000"></rect>
+
+            <!-- Red Vines (initially hidden) -->
+            <path class="hidden vine" d="M60 0 Q60 5, 60 550" stroke="#ff0000" stroke-width="5" fill="none" />
+            <!-- Frame 1 -->
+            <path class="hidden vine" d="M440 0 Q440 5, 440 550" stroke="#ff0000" stroke-width="5" fill="none" />
+            <!-- Frame 2 -->
+            <path class="hidden vine" d="M140 0 Q140 5, 140 550" stroke="#ff0000" stroke-width="5" fill="none" />
+            <!-- Frame 3 -->
+            <path class="hidden vine" d="M355 0 Q355 5, 355 550" stroke="#ff0000" stroke-width="5" fill="none" />
+            <!-- Frame 4 -->
+        </svg>
+    </div>
+
+    <!-- Envelope -->
+    <div id="envelope" onclick="openEnvelope()">
+        <img src="pasandida2.jpg" alt="Love Letter" style="width: 250px;">
+        <p>Click to Open ❤️</p>
+    </div>
+
+    <!-- Content -->
+    <div id="content">
+        <div id="hanging-pictures">
+            <div class="hanging">
+                <img src="back_kurti.jpg" alt="Pic 1">
+            </div>
+            <div class="hanging">
+                <img src="vizclose.jpg" alt="Pic 2">
+            </div>
+            <div class="hanging">
+                <img src="selfie.jpg" alt="Pic 3">
+            </div>
+            <div class="hanging">
+                <img src="standing.jpg" alt="Pic 4">
+            </div>
+        </div>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        
+        
+        <section>
+            <img src="she_snap.png" height="350">
+            <img src="pasandida1.jpg" height="300">
+            <img src="me_snap.png" height="350">
+        </section>
+        <section>
+            <h2>Hii Kumkum 🥰</h2>
+            <p>You have seen many of my IG stories right, all of the stories were meant for u. Few years back when I
+                first saw u, I felt affectionate towards u. Whenever i went to your area, my eyes always tries to find u
+                and catch a glimpse of u. But now it has become more than that. I want to be the
+                part of your life 🌏. I know we haven't talked once and u don"t know much about me, but can we try to
+                know each other after we start dating. So will you give me a chance🌹?</p>
+        </section>
+        <section>
+            <p>Whenever I look at your pictures, my face fills up with happiness. I feel like, <b>"Yaar ye kitni pyari
+                    hai"</b>. If she
+                becomes mine, it will be the best thing that ever happened in my life.</p>
+        </section>
+        <section>
+            <p>I know it's a bit optimistic of me to want someone so beautiful as u, but what can I do<b>"Ye Dil Hai
+                    Ki Manta Nahi"</b>. So i wanna ask u this:</p>
+            <h1>Will you be my girlfriend? 🌹</h1>
+            <p>I'm eagerly waiting for your reply.</p>
+            <img src="sanp_finger.png" alt="heart" height="200">
+        </section>
+    </div>
+
+    <script>
+        function openEnvelope() {
+            document.getElementById('envelope').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+
+            // Show the vines
+            const vines = document.querySelectorAll('.vine');
+            vines.forEach(vine => vine.classList.remove('hidden'));
+        }
+    </script>
+</body>
+
+</html>
